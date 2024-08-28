@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/style.css')
+  body
+    h1 Students List
+    table
+      tr
+        th Name
+        th Age
+        th Class
+        th Actions
+      each student in students
+        tr
+          td= student.name
+          td= student.age
+          td= student.class
+          td
+            form(action='/students/delete/' + student._id, method='POST')
+              button(type='submit') Delete
+    a(href='/students/add') Add Another Student
