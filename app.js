@@ -14,7 +14,7 @@ app.use(async (req, res, next) => {
       req.db = await getDb();
       next();
     } catch (err) {
-      res.status(500).send('Database connection error1');
+      res.status(500).send('Database connection error12');
     }
   });
   
